@@ -50,6 +50,19 @@
       box-shadow: 0 10px 20px rgba(255, 0, 0, 0.4);
     }
 
+    .woaha {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: wheat;
+      animation: woahs 2s infinite;
+    }
+
+    @keyframes woahs {
+      0% { text-shadow: 0 0 5px #ffbe4d; }
+      50% { text-shadow: 0 0 5px #ffbe4d; }
+      100% { text-shadow: 0 0 5px #ffbe4d; }
+    }
+
  /* mobile response */
     @media (max-width: 900px) {
       .container-wrapper {
@@ -64,18 +77,18 @@
   <div class="container-wrapper">
     <div class="card">The Original Snake</div>
     <div class="card">Retro Snake</div>
-    <div class="card">Cookie Snake</div>
+    <div class="card">
+      <span class="woaha">Cookie Snake</span></div>
     <div class="card">Coming soon...</div>
     <div class="card">Coming soon...</div>
   </div>
 
   <script>
-    // Example interactivity
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('click', () => {
-        alert(`You clicked on: ${card.textContent.trim()}`);
-      });
+    // Transfer card clicks to snake games
+    document.queryselector('.card').parentElement.addEventListener('click',() => {
+      window.location.href = "Slithercookies.html";
     });
+
   </script>
 </body>
 </html>
